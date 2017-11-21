@@ -6,7 +6,8 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class TaskService {
 
-  private baseUrl = 'http://localhost:8080';
+  /*private baseUrl = 'http://localhost:8080';*/
+  private baseUrl = 'https://checklistapi.herokuapp.com';
 
   constructor(private http: Http) {}
 
