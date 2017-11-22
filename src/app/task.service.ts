@@ -29,7 +29,7 @@ export class TaskService {
 
   updateTask(taskData: Task): Promise<Task> {
     return this.http
-      .put(this.baseUrl + '/api/tasks/ taskData.id', taskData)
+      .put(this.baseUrl + '/api/tasks/' + taskData.id, taskData)
       .toPromise()
       .then(response => response.json() as Task)
       .catch(this.handleError);
