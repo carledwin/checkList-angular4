@@ -37,7 +37,7 @@ export class TaskService {
 
   deleteTask(id: number): Promise<any> {
     return this.http
-      .delete(this.baseUrl + '/api/tasks' + id)
+      .delete(this.baseUrl + '/api/tasks/' + id)
       .toPromise()
       .catch(this.handleError);
   }
