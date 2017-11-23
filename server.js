@@ -1,5 +1,11 @@
-var express      = require('express');
-
-var app = express()
-  .use(express.static(__dirname + '/'))
-  .listen(process.env.PORT || 5000);
+{
+  "root": "dist/",
+  "routes": {
+    "/**": "index.html"
+  },
+  "proxies": {
+    "/api/": {
+      "origin": "you api url"
+    }
+  }
+}
